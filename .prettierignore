@@ -1,0 +1,10 @@
+# Ignore artifacts:
+build
+coverage
+node_modules
+/**/resources
+/**/node_modules
+/**/docs/output
+/**/build
+/**/dist
+/**/coverage

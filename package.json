@@ -1,25 +1,60 @@
 {
-  "name": "ai-blog",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:fe": "npm --prefix ./blog-fe run dev",
-    "build:fe": "npm --prefix ./blog-fe run build"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "eslint": "eslint **/*.{ts,vue} --fix",
+    "prettier": "prettier **/*.{ts,vue} --write --ignore-unknown",
+    "lint": "eslint **/*.{ts,vue} --fix && prettier **/*.{ts,vue} --write --ignore-unknown",
+    "lint-staged": "echo passed",
+    "prepare": "husky"
   },
-  "author": "",
-  "license": "ISC",
+  "lint-staged": {
+    "*.{ts,vue}": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown",
+      "vue-tsc --noEmit --resolveJsonModule"
+    ]
+  },
   "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/typography": "^0.5.13",
+    "@types/eslint": "^9.6.1",
+    "@typescript-eslint/eslint-plugin": "^8.5.0",
+    "@typescript-eslint/parser": "^8.5.0",
+    "@vue/eslint-config-typescript": "^13.0.0",
     "autoprefixer": "^10.4.19",
-    "daisyui": "^4.11.1",
+    "daisyui": "^4.12.10",
+    "eslint": "^8.57.0",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-jsdoc": "^50.2.3",
+    "eslint-plugin-promise": "^7.1.0",
+    "eslint-plugin-regexp": "^2.6.0",
+    "eslint-plugin-vue": "^9.28.0",
     "highlight.js": "^11.9.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "openai": "^4.47.2",
     "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.3"
+    "postcss-import": "^16.1.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "tailwindcss": "^3.4.3",
+    "theme-change": "^2.5.0",
+    "vue-tsc": "^2.1.6"
   },
-  "workspaces": [
-    "blog-fe"
-  ]
+  "dependencies": {
+    "@stefanobartoletti/nuxt-social-share": "^1.0.1",
+    "nuxt": "^3.11.2",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2"
+  }
 }

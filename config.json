@@ -1,0 +1,10 @@
+{
+    "name": "Screaming Dodo",
+    "description": "A simple and clean theme for Ghost",
+    "template": "",
+    "bannerImage": "bannerimage.webp",
+    "theme": {
+        "default": "",
+        "forceConfig": false
+    }
+}

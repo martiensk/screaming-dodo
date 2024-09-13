@@ -1,0 +1,14 @@
+/**/resources
+/**/node_modules
+/**/docs/output
+/**/build
+/**/dist
+
+/**/*.json
+
+/**/*.stories.js
+**/*.stories.js
+*.stories.js
+
+__TESTS__/Artillery
+.eslintrc.js
