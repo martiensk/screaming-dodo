@@ -13,7 +13,6 @@
 </template>
 <script setup lang="ts">
     import config from '~/config.json';
-    import { ref } from 'vue';
 
     const bgImageStyle = {
         backgroundImage: `url(/images/${config.bannerImage})`

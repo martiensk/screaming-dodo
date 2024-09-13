@@ -8,17 +8,17 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "eslint": "eslint **/*.{ts,vue} --fix",
+    "eslint": "eslint **/*.{ts,vue} --fix --max-warnings=0",
     "prettier": "prettier **/*.{ts,vue} --write --ignore-unknown",
-    "lint": "eslint **/*.{ts,vue} --fix && prettier **/*.{ts,vue} --write --ignore-unknown",
-    "lint-staged": "echo passed",
+    "type-check": "vue-tsc --noEmit --resolveJsonModule --skipLibCheck",
+    "lint": "npm run eslint && npm run prettier && npm run type-check",
+    "lint-staged": "lint-staged",
     "prepare": "husky"
   },
   "lint-staged": {
     "*.{ts,vue}": [
-      "eslint --fix",
-      "prettier --write --ignore-unknown",
-      "vue-tsc --noEmit --resolveJsonModule"
+      "npm run eslint",
+      "npm run prettier"
     ]
   },
   "devDependencies": {
