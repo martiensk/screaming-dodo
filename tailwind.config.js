@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import { themes } from './utils/themes'
+
 export default {
   content: [
     "./components/**/*.{js,vue,ts}",
@@ -16,7 +18,8 @@ export default {
     require('@tailwindcss/typography'),
   ],
   daisyui: {
-    themes: ["light", "dark", "cupcake"],
-  }
+    themes
+  },
+  darkMode: 'class',
 }
 
