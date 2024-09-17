@@ -14,7 +14,8 @@ export default defineNuxtConfig({
         '@stefanobartoletti/nuxt-social-share',
         'nuxt-swiper',
         'nuxt-delay-hydration',
-        '@nuxt/image'
+        '@nuxt/image',
+        '@nuxthq/studio'
     ],
     delayHydration: {
         debug: process.env.NODE_ENV === 'development',

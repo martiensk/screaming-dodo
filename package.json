@@ -55,6 +55,7 @@
     "vue-tsc": "^2.1.6"
   },
   "dependencies": {
+    "@nuxthq/studio": "^2.1.1",
     "@stefanobartoletti/nuxt-social-share": "^1.0.1",
     "nuxt": "^3.11.2",
     "vue": "^3.4.27",
