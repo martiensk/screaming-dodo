@@ -1,10 +1,33 @@
 {
     "name": "Screaming Dodo",
     "description": "A simple and clean theme for Ghost",
+    "summary": "Et minim deserunt nisi consequat aliquip irure officia qui. Officia nostrud eiusmod consectetur nisi exercitation id sint. Excepteur qui laboris duis reprehenderit. Enim proident commodo dolor incididunt id enim proident culpa. Quis mollit laborum eiusmod id cupidatat sint voluptate aute aliqua excepteur consequat.",
     "template": "",
-    "bannerImage": "bannerimage.webp",
+    "bannerImage": "bannerimage.jpg",
     "theme": {
         "default": "",
         "forceConfig": false
-    }
+    },
+    "categories": [
+        {
+            "name": "health",
+            "description": "Health related articles",
+            "image": "health.webp"
+        },
+        {
+            "name": "technology",
+            "description": "Technology related articles",
+            "image": "tech.webp"
+        },
+        {
+            "name": "fashion",
+            "description": "Fashion related articles",
+            "image": "fashion.png"
+        },
+        {
+            "name": "science",
+            "description": "Science related articles",
+            "image": "science.png"
+        }
+    ]
 }

@@ -1,5 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-
 export default defineNuxtConfig({
     devtools: { enabled: true },
     css: ['~/assets/main.css'],
@@ -12,5 +10,14 @@ export default defineNuxtConfig({
     },
 
     compatibilityDate: '2024-09-06',
-    modules: ['@stefanobartoletti/nuxt-social-share']
+    modules: [
+        '@stefanobartoletti/nuxt-social-share',
+        'nuxt-swiper',
+        'nuxt-delay-hydration',
+        '@nuxt/image'
+    ],
+    delayHydration: {
+        debug: process.env.NODE_ENV === 'development',
+        mode: 'init'
+    }
 });
