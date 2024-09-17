@@ -19,5 +19,12 @@ export default defineNuxtConfig({
     delayHydration: {
         debug: process.env.NODE_ENV === 'development',
         mode: 'init'
+    },
+    runtimeConfig: {
+        public: {
+            theme: '',
+            forceThemeConfig: false,
+            name: 'TestApp'
+        }
     }
 });
