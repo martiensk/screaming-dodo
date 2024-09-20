@@ -1,6 +1,6 @@
 <template>
     <div
-        class="card mx-auto my-10 w-10/12 cursor-pointer rounded-none bg-base-100 shadow-none"
+        class="card mx-auto my-10 w-10/12 max-w-content-sm cursor-pointer rounded-none bg-base-100 shadow-none lg:max-w-content"
         @click="navigateTo(article._path)">
         <figure v-if="article.image">
             <NuxtImg :src="`/images/${article.image}`" :alt="article.title" />

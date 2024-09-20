@@ -13,9 +13,13 @@
 
     <p v-if="config.summary" class="my-8 px-8 text-center">{{ config.summary }}</p>
 
-    <Swiper v-if="!filter" class="my-8" :slides-per-view="3" :space-between="50">
+    <Swiper
+        v-if="!filter"
+        class="my-8 max-w-[360px] sm:max-w-content-sm lg:max-w-content"
+        :slides-per-view="slides.slides"
+        :space-between="slides.space">
         <SwiperSlide v-for="category in config.categories" :key="category.name">
-            <div class="card image-full mx-4 h-32 w-40 bg-base-100 shadow-xl lg:h-64 lg:w-80">
+            <div class="card image-full h-32 w-40 bg-base-100 shadow-xl lg:h-64 lg:w-80">
                 <figure>
                     <NuxtImg
                         :src="`/images/${category.image}`"
@@ -52,14 +56,17 @@
 </template>
 <script setup lang="ts">
     import config from '~/content/config/.config.json';
-
-    console.log(config.categories);
+    import { EBreakpoints } from '~/utils/breakpoints.enum';
 
     const bgImageStyle = {
         backgroundImage: `url(/images/${config.bannerImage})`
     };
 
     const filter = ref('');
+    const slides = ref({
+        slides: 2,
+        space: 0
+    });
 
     const query = computed(() => {
         return {
@@ -70,19 +77,35 @@
         };
     });
 
-    // const selectedArticles = computed(() => {
-    //     return articles.filter((article) => {
-    //         if (!filter.value) {
-    //             return article;
-    //         }
-    //         return (
-    //             article.category.toLowerCase().replace(' ', '') ===
-    //             filter.value.toLowerCase().replace(' ', '')
-    //         );
-    //     });
-    // });
+    const calcSlides = () => {
+        if (window.innerWidth > EBreakpoints.lg) {
+            slides.value = {
+                slides: 3,
+                space: 20
+            };
+        } else if (window.innerWidth > EBreakpoints.sm) {
+            slides.value = {
+                slides: 3,
+                space: 20
+            };
+        } else {
+            slides.value = {
+                slides: 2,
+                space: 0
+            };
+        }
+    };
 
     const updateFilter = (name: string) => {
         filter.value = name;
     };
+
+    onMounted(() => {
+        calcSlides();
+        window.addEventListener('resize', calcSlides);
+    });
+
+    onBeforeUnmount(() => {
+        window.removeEventListener('resize', calcSlides);
+    });
 </script>
