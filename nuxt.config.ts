@@ -18,6 +18,9 @@ export default defineNuxtConfig({
         '@nuxthq/studio',
         '@nuxt/content'
     ],
+    studio: {
+        enabled: true
+    },
     delayHydration: {
         debug: process.env.NODE_ENV === 'development',
         mode: 'init'
