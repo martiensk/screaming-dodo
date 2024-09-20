@@ -21,7 +21,7 @@
         <SwiperSlide v-for="category in config.categories" :key="category.name">
             <div class="card image-full h-32 w-40 bg-base-100 shadow-xl lg:h-64 lg:w-80">
                 <figure>
-                    <NuxtImg
+                    <img
                         :src="`/images/${category.image}`"
                         :alt="category.name"
                         height="256"
