@@ -1,5 +1,7 @@
 <template>
-    <div class="card mx-auto my-10 w-10/12 cursor-pointer rounded-none bg-base-100 shadow-none">
+    <div
+        class="card mx-auto my-10 w-10/12 cursor-pointer rounded-none bg-base-100 shadow-none"
+        @click="navigateTo(article._path)">
         <figure v-if="article.image">
             <NuxtImg :src="`/images/${article.image}`" :alt="article.title" />
         </figure>
@@ -26,11 +28,9 @@
     </div>
 </template>
 <script setup lang="ts">
-    import type { IArticle } from '~/types/article.interface';
+    import type { ParsedContent } from '@nuxt/content';
 
-    const props = defineProps<{
-        article: IArticle;
+    defineProps<{
+        article: ParsedContent;
     }>();
-
-    console.log(props.article);
 </script>

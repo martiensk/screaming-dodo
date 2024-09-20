@@ -4,28 +4,29 @@
     "summary": "Et minim deserunt nisi consequat aliquip irure officia qui. Officia nostrud eiusmod consectetur nisi exercitation id sint. Excepteur qui laboris duis reprehenderit. Enim proident commodo dolor incididunt id enim proident culpa. Quis mollit laborum eiusmod id cupidatat sint voluptate aute aliqua excepteur consequat.",
     "template": "",
     "bannerImage": "bannerimage.jpg",
+    "maxArticles": 20,
     "theme": {
-        "default": "",
+        "name": "",
         "forceConfig": false
     },
     "categories": [
         {
-            "name": "health",
+            "name": "Health",
             "description": "Health related articles",
             "image": "health.webp"
         },
         {
-            "name": "technology",
+            "name": "Technology",
             "description": "Technology related articles",
             "image": "tech.webp"
         },
         {
-            "name": "fashion",
+            "name": "Fashion",
             "description": "Fashion related articles",
             "image": "fashion.png"
         },
         {
-            "name": "science",
+            "name": "Science",
             "description": "Science related articles",
             "image": "science.png"
         }

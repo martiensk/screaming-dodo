@@ -15,17 +15,11 @@ export default defineNuxtConfig({
         'nuxt-swiper',
         'nuxt-delay-hydration',
         '@nuxt/image',
-        '@nuxthq/studio'
+        '@nuxthq/studio',
+        '@nuxt/content'
     ],
     delayHydration: {
         debug: process.env.NODE_ENV === 'development',
         mode: 'init'
-    },
-    runtimeConfig: {
-        public: {
-            theme: '',
-            forceThemeConfig: false,
-            name: 'TestApp'
-        }
     }
 });

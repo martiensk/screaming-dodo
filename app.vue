@@ -1,28 +1,27 @@
 <template>
-    <Html :data-theme="config.public.theme" />
+    <Html :data-theme="config.theme.name" />
     <ConfigBar />
-    <!-- <NuxtLayout>
+    <NuxtLayout>
         <NuxtPage :key />
-    </NuxtLayout> -->
+    </NuxtLayout>
     <footer class="navbar justify-center bg-base-200">
-        &copy; {{ config.public.name }} {{ new Date().getFullYear() }}
+        &copy; {{ config.name }} {{ new Date().getFullYear() }}
     </footer>
 </template>
 <script setup lang="ts">
     import { onMounted } from 'vue';
     import { themeChange } from 'theme-change';
-    // import config from '~/config.json';
-    const config = useRuntimeConfig();
+    import config from '~/content/config/.config.json';
 
-    // const route = useRoute();
+    const route = useRoute();
 
     useHead({
         htmlAttrs: {
-            'data-theme': config.public.theme as string
+            'data-theme': config.theme.name as string
         }
     });
 
-    // const key = computed(() => route.fullPath);
+    const key = computed(() => route.fullPath);
 
     onMounted(() => {
         themeChange(false);

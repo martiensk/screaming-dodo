@@ -13,14 +13,9 @@
 
     <p v-if="config.summary" class="my-8 px-8 text-center">{{ config.summary }}</p>
 
-    <Swiper
-        v-if="!filter"
-        class="my-8"
-        :slides-per-view="3"
-        :space-between="50"
-        :centered-slides="true">
+    <Swiper v-if="!filter" class="my-8" :slides-per-view="3" :space-between="50">
         <SwiperSlide v-for="category in config.categories" :key="category.name">
-            <card class="card image-full mx-4 h-32 w-40 bg-base-100 shadow-xl lg:h-64 lg:w-80">
+            <div class="card image-full mx-4 h-32 w-40 bg-base-100 shadow-xl lg:h-64 lg:w-80">
                 <figure>
                     <NuxtImg
                         :src="`/images/${category.image}`"
@@ -36,20 +31,27 @@
                         >{{ category.name }}</button
                     >
                 </div>
-            </card>
+            </div>
         </SwiperSlide>
     </Swiper>
     <h2
         v-else
         class="cursor-pointer text-center text-4xl capitalize underline hover:brightness-150"
-        @click="filter = ''">
+        @click="updateFilter('')">
         X- {{ filter }}
     </h2>
 
-    <SummaryDefault v-for="article in selectedArticles" :key="article.title" :article="article" />
+    <ContentList :query>
+        <template #default="{ list }">
+            <SummaryDefault v-for="article in list" :key="article.title" :article="article" />
+        </template>
+        <template #not-found>
+            <p>No articles found.</p>
+        </template>
+    </ContentList>
 </template>
 <script setup lang="ts">
-    import config from '~/config.json';
+    import config from '~/content/config/.config.json';
 
     console.log(config.categories);
 
@@ -59,17 +61,26 @@
 
     const filter = ref('');
 
-    const selectedArticles = computed(() => {
-        return articles.filter((article) => {
-            if (!filter.value) {
-                return article;
-            }
-            return (
-                article.category.toLowerCase().replace(' ', '') ===
-                filter.value.toLowerCase().replace(' ', '')
-            );
-        });
+    const query = computed(() => {
+        return {
+            path: '/',
+            where: [{ category: { $contains: filter.value } }],
+            limit: config.maxArticles,
+            sort: [{ date: -1 }]
+        };
     });
+
+    // const selectedArticles = computed(() => {
+    //     return articles.filter((article) => {
+    //         if (!filter.value) {
+    //             return article;
+    //         }
+    //         return (
+    //             article.category.toLowerCase().replace(' ', '') ===
+    //             filter.value.toLowerCase().replace(' ', '')
+    //         );
+    //     });
+    // });
 
     const updateFilter = (name: string) => {
         filter.value = name;
