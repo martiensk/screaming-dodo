@@ -6,7 +6,6 @@
                     class="prose mx-auto my-8 max-w-content p-4 md:prose-lg"
                     v-html="
                         `
-                            <h1>${doc.title}</h1>
                             ${doc.content}
                         `
                     " />

@@ -7,17 +7,18 @@
         </figure>
         <div class="card-body">
             <div class="mb-4 flex">
-                <div class="avatar">
+                <div v-if="article.author" class="avatar">
                     <div
                         class="mr-4 w-12 rounded-full ring ring-primary ring-offset-2 ring-offset-base-100">
                         <NuxtImg
                             :src="`/images/authors/${article.author.toLowerCase().replace(' ', '')}.png`" />
                     </div>
                 </div>
-                <div>
+                <div v-if="article.author || article.published">
                     <p>
-                        <span class="font-bold">Author:</span> {{ article.author }}<br />
-                        <span>Date:</span> {{ article.published }}
+                        <span v-if="article.author" class="font-bold">Author:</span>
+                        {{ article.author }}<br />
+                        <span v-if="article.published">Date:</span> {{ article.published }}
                     </p>
                 </div>
             </div>
