@@ -7,23 +7,22 @@
         </figure>
         <div class="card-body">
             <div class="mb-4 flex">
-                <div v-if="article.author" class="avatar">
+                <div v-if="article.author.avatar" class="avatar">
                     <div
                         class="mr-4 w-12 rounded-full ring ring-primary ring-offset-2 ring-offset-base-100">
-                        <img
-                            :src="`/images/authors/${article.author.toLowerCase().replace(' ', '')}.png`" />
+                        <img :src="`/images/authors/${article.author.avatar}`" />
                     </div>
                 </div>
-                <div v-if="article.author || article.published">
+                <div v-if="article.author.name || article.published">
                     <p>
                         <span v-if="article.author" class="font-bold">Author:</span>
-                        {{ article.author }}<br />
+                        {{ article.author.name }}<br />
                         <span v-if="article.published">Date:</span> {{ article.published }}
                     </p>
                 </div>
             </div>
             <h2 class="card-title">{{ article.title }}</h2>
-            <p>{{ article.summary }}</p>
+            <p>{{ article.description }}</p>
             <hr />
         </div>
     </div>
@@ -31,7 +30,9 @@
 <script setup lang="ts">
     import type { ParsedContent } from '@nuxt/content';
 
-    defineProps<{
+    const props = defineProps<{
         article: ParsedContent;
     }>();
+
+    console.log(props.article);
 </script>

@@ -16,10 +16,14 @@ export default defineNuxtConfig({
         'nuxt-delay-hydration',
         '@nuxt/image',
         '@nuxthq/studio',
-        '@nuxt/content'
+        '@nuxt/content',
+        '@nuxtjs/sitemap'
     ],
     studio: {
         enabled: true
+    },
+    content: {
+        documentDriven: true
     },
     delayHydration: {
         debug: process.env.NODE_ENV === 'development',
