@@ -11,11 +11,11 @@ export default defineNuxtConfig({
 
     compatibilityDate: '2024-09-06',
     modules: [
+        '@nuxthq/studio',
         '@stefanobartoletti/nuxt-social-share',
         'nuxt-swiper',
         'nuxt-delay-hydration',
         '@nuxt/image',
-        '@nuxthq/studio',
         '@nuxt/content',
         '@nuxtjs/sitemap'
     ],
