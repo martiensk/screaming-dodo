@@ -99,20 +99,6 @@ export default defineNuxtSchema({
                     default: false
                 })
             }
-        }),
-        categories: group({
-            title: 'Category Configuration',
-            description: 'Configure article categories',
-            icon: 'mdi-palette',
-            fields: {
-                forceConfig: field({
-                    type: 'array',
-                    title: 'Categories',
-                    description:
-                        'Add category objects here. Each object should have a name, description and image.',
-                    icon: 'mdi-toggle-switch'
-                })
-            }
         })
     }
 });
