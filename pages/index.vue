@@ -1,10 +1,12 @@
 <template>
-    <component :is="dynamicComponent"></component>
+    <NuxtLayout>
+        <component :is="dynamicComponent"></component>
+    </NuxtLayout>
 </template>
 
 <script setup lang="ts">
     import { defineAsyncComponent } from 'vue';
-    import config from '~/content/config/.config.json';
+    import config from '~/config/.config.json';
 
     const dynamicComponent = shallowRef<Component | null>(null);
 

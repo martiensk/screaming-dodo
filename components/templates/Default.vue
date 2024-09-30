@@ -55,7 +55,7 @@
     </ContentList>
 </template>
 <script setup lang="ts">
-    import config from '~/content/config/.config.json';
+    import config from '~/config/.config.json';
     import { EBreakpoints } from '~/utils/breakpoints.enum';
 
     const bgImageStyle = {

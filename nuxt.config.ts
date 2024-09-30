@@ -19,15 +19,8 @@ export default defineNuxtConfig({
         '@nuxt/content',
         '@nuxtjs/sitemap'
     ],
-    sitemap: {
-        hostname: 'https://yourwebsite.com',
-        gzip: true
-    } as Record<string, any>,
     studio: {
         enabled: true
-    },
-    content: {
-        documentDriven: true
     },
     delayHydration: {
         debug: process.env.NODE_ENV === 'development',

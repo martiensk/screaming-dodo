@@ -1,9 +1,7 @@
 <template>
     <Html :data-theme="config.theme.name" />
     <ConfigBar />
-    <NuxtLayout>
-        <NuxtPage :key />
-    </NuxtLayout>
+    <NuxtPage :key />
     <footer class="navbar justify-center bg-base-200">
         &copy; {{ config.name }} {{ new Date().getFullYear() }}
     </footer>
@@ -11,7 +9,7 @@
 <script setup lang="ts">
     import { onMounted } from 'vue';
     import { themeChange } from 'theme-change';
-    import config from '~/content/config/.config.json';
+    import config from '~/config/.config.json';
 
     const route = useRoute();
 
