@@ -21,6 +21,14 @@ export default defineNuxtSchema({
                     icon: 'mdi-text',
                     default: 'A simple and clean theme for Ghost'
                 }),
+                summary: field({
+                    type: 'string',
+                    title: 'Description',
+                    description: 'A longer summary of what the blog is about',
+                    icon: 'mdi-text',
+                    default:
+                        'A simple and clean theme for Ghost, but not the band. Something else entirely.'
+                }),
                 bannerImage: field({
                     type: 'string',
                     title: 'Banner Image',
@@ -44,7 +52,7 @@ export default defineNuxtSchema({
             fields: {
                 name: field({
                     type: 'string',
-                    title: 'Name',
+                    title: 'Colour Scheme',
                     description: 'The name of the theme',
                     icon: 'mdi-ph-palette',
                     default: '',
@@ -86,9 +94,23 @@ export default defineNuxtSchema({
                 forceConfig: field({
                     type: 'boolean',
                     title: 'Force Configuration',
-                    description: 'Force the configuration of the theme',
+                    description: 'Force the site to show the theme configuration preview module',
                     icon: 'mdi-toggle-switch',
                     default: false
+                })
+            }
+        }),
+        categories: group({
+            title: 'Category Configuration',
+            description: 'Configure article categories',
+            icon: 'mdi-palette',
+            fields: {
+                forceConfig: field({
+                    type: 'array',
+                    title: 'Categories',
+                    description:
+                        'Add category objects here. Each object should have a name, description and image.',
+                    icon: 'mdi-toggle-switch'
                 })
             }
         })
