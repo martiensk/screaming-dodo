@@ -23,7 +23,7 @@ export default defineNuxtSchema({
                 }),
                 summary: field({
                     type: 'string',
-                    title: 'Description',
+                    title: 'Summary',
                     description: 'A longer summary of what the blog is about',
                     icon: 'mdi-text',
                     default:
@@ -97,6 +97,29 @@ export default defineNuxtSchema({
                     description: 'Force the site to show the theme configuration preview module',
                     icon: 'mdi-toggle-switch',
                     default: false
+                })
+            }
+        }),
+        categories: group({
+            title: 'Category Configuration',
+            description: 'Configure article categories',
+            icon: 'mdi-palette',
+            fields: {
+                forceConfig: field({
+                    type: 'array',
+                    title: 'Categories',
+                    description:
+                        'Add category objects here. Each object should have a name, description and image.',
+                    icon: 'mdi-format-list-bulleted',
+                    default: [],
+                    items: {
+                        type: 'object',
+                        properties: {
+                            name: { type: 'string' },
+                            description: { type: 'string' },
+                            image: { type: 'string' }
+                        }
+                    }
                 })
             }
         })
