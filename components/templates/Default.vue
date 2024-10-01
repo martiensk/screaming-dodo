@@ -13,37 +13,42 @@
 
     <p v-if="appConfig.blog.summary" class="my-8 px-8 text-center">{{ appConfig.blog.summary }}</p>
 
-    <Swiper
-        v-if="!filter"
-        class="my-8 max-w-[360px] sm:max-w-content-sm lg:max-w-content"
-        :slides-per-view="slides.slides"
-        :space-between="slides.space">
-        <SwiperSlide v-for="category in categories" :key="category.name">
-            <div class="card image-full h-32 w-40 bg-base-100 shadow-xl lg:h-64 lg:w-80">
-                <figure>
-                    <img
-                        :src="`/images/${category.image}`"
-                        :alt="category.name"
-                        height="256"
-                        width="320" />
-                </figure>
+    <Transition @enter="enter" @leave="leave">
+        <Swiper
+            v-if="!filter"
+            id="categories-swiper"
+            class="my-8 max-w-[360px] sm:max-w-content-sm lg:max-w-content"
+            :slides-per-view="slides.slides"
+            :space-between="slides.space">
+            <SwiperSlide v-for="category in categories" :key="category.name">
+                <div class="card image-full h-32 w-40 bg-base-100 shadow-xl lg:h-64 lg:w-80">
+                    <figure>
+                        <img
+                            :src="`/images/${category.image}`"
+                            :alt="category.name"
+                            height="256"
+                            width="320" />
+                    </figure>
 
-                <div class="card-body flex items-center justify-center">
-                    <button
-                        class="btn btn-primary capitalize"
-                        @click="updateFilter(category.name)"
-                        >{{ category.name }}</button
-                    >
+                    <div class="card-body flex items-center justify-center">
+                        <button
+                            class="btn btn-primary capitalize"
+                            @click="updateFilter($event, category.name)"
+                            >{{ category.name }}</button
+                        >
+                    </div>
                 </div>
-            </div>
-        </SwiperSlide>
-    </Swiper>
-    <h2
-        v-else
-        class="cursor-pointer text-center text-4xl capitalize underline hover:brightness-150"
-        @click="updateFilter('')">
-        X- {{ filter }}
-    </h2>
+            </SwiperSlide>
+        </Swiper>
+    </Transition>
+    <Transition @enter="enter" @leave="leave">
+        <h2
+            v-if="filter"
+            class="cursor-pointer text-center text-4xl capitalize underline hover:brightness-150"
+            @click="updateFilter($event, '')">
+            X- {{ filter }}
+        </h2>
+    </Transition>
 
     <ContentList :query>
         <template #default="{ list }">
@@ -56,15 +61,24 @@
 </template>
 <script setup lang="ts">
     import { EBreakpoints } from '~/utils/breakpoints.enum';
+    import { gsap } from 'gsap';
+    import { Flip } from 'gsap/all';
 
+    gsap.registerPlugin(Flip);
+
+    //#region Interfaces
     declare interface ICategory {
         name: string;
         description: string;
         image: string;
     }
+    //#endregion
 
+    //#region Composables
     const appConfig = useAppConfig();
+    //#endregion
 
+    //#region Refs
     const bgImageStyle = {
         backgroundImage: `url(/images/${appConfig.blog.bannerImage})`
     };
@@ -76,7 +90,9 @@
         slides: 2,
         space: 0
     });
+    //#endregion
 
+    //#region Computed
     const query = computed(() => {
         return {
             path: '/',
@@ -85,7 +101,9 @@
             sort: [{ date: -1 }]
         };
     });
+    //#endregion
 
+    //#region Methods
     const calcSlides = () => {
         if (window.innerWidth > EBreakpoints.lg) {
             slides.value = {
@@ -105,10 +123,38 @@
         }
     };
 
-    const updateFilter = (name: string) => {
+    const updateFilter = (e: MouseEvent, name: string) => {
         filter.value = name;
     };
 
+    //#region Animations
+    const enter = (el: Element, done: () => void) => {
+        gsap.from(el, {
+            duration: 0.4,
+            height: 0,
+            marginTop: 0,
+            marginBottom: 0,
+            opacity: 0,
+            ease: 'easeOut',
+            onComplete: done
+        });
+    };
+    const leave = (el: Element, done: () => void) => {
+        gsap.to(el, {
+            duration: 0.4,
+            height: 0,
+            marginTop: 0,
+            marginBottom: 0,
+            opacity: 0,
+            ease: 'easeOut',
+            onComplete: done
+        });
+    };
+
+    //#endregion
+    //#endregion
+
+    //#region Lifecycle Hooks
     onMounted(() => {
         calcSlides();
         window.addEventListener('resize', calcSlides);
@@ -117,4 +163,5 @@
     onBeforeUnmount(() => {
         window.removeEventListener('resize', calcSlides);
     });
+    //#endregion
 </script>

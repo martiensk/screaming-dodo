@@ -30,9 +30,7 @@
 <script setup lang="ts">
     import type { ParsedContent } from '@nuxt/content';
 
-    const props = defineProps<{
+    defineProps<{
         article: ParsedContent;
     }>();
-
-    console.log(props.article);
 </script>
