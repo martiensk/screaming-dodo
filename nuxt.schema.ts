@@ -105,7 +105,7 @@ export default defineNuxtSchema({
             description: 'Configure article categories',
             icon: 'mdi-palette',
             fields: {
-                forceConfig: field({
+                categories: field({
                     type: 'array',
                     title: 'Categories',
                     description:
