@@ -5,9 +5,9 @@
         </main>
     </NuxtLayout>
     <footer class="navbar justify-center bg-base-200">
-        &copy; {{ config.name }} {{ new Date().getFullYear() }}
+        &copy; {{ appConfig.blog.name }} {{ new Date().getFullYear() }}
     </footer>
 </template>
 <script setup lang="ts">
-    import config from '~/config/.config.json';
+    const appConfig = useAppConfig();
 </script>

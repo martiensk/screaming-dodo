@@ -50,7 +50,7 @@ export default defineNuxtSchema({
             description: 'Theme configuration settings',
             icon: 'mdi-palette',
             fields: {
-                name: field({
+                colourScheme: field({
                     type: 'string',
                     title: 'Colour Scheme',
                     description: 'The name of the theme',
@@ -90,6 +90,14 @@ export default defineNuxtSchema({
                         'nord',
                         'sunset'
                     ]
+                }),
+                homeTemplate: field({
+                    type: 'string',
+                    title: 'Template',
+                    description: 'The template to use for the theme',
+                    icon: 'mdi-file-document',
+                    default: 'Default',
+                    required: ['default']
                 }),
                 forceConfig: field({
                     type: 'boolean',

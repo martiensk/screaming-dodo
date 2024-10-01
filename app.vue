@@ -1,18 +1,19 @@
 <template>
-    <Html :data-theme="config.theme.name" />
-    <ConfigBar />
+    <Html :data-theme="appConfig.theme.colourScheme" />
+    <ConfigBar v-if="appConfig.theme.forceConfig" />
     <NuxtPage :key />
 </template>
 <script setup lang="ts">
     import { onMounted } from 'vue';
     import { themeChange } from 'theme-change';
-    import config from '~/config/.config.json';
+
+    const appConfig = useAppConfig();
 
     const route = useRoute();
 
     useHead({
         htmlAttrs: {
-            'data-theme': config.theme.name as string
+            'data-theme': appConfig.theme.colourScheme as string
         }
     });
 

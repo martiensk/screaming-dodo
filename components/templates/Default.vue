@@ -3,22 +3,22 @@
         <div class="hero-overlay bg-opacity-60"></div>
         <div class="hero-content text-center text-neutral-content">
             <div class="max-w-md">
-                <h1 class="mb-5 text-5xl font-bold">{{ config.name }}</h1>
+                <h1 class="mb-5 text-5xl font-bold">{{ appConfig.blog.name }}</h1>
                 <p class="mb-5">
-                    {{ config.description }}
+                    {{ appConfig.blog.description }}
                 </p>
             </div>
         </div>
     </div>
 
-    <p v-if="config.summary" class="my-8 px-8 text-center">{{ config.summary }}</p>
+    <p v-if="appConfig.blog.summary" class="my-8 px-8 text-center">{{ appConfig.blog.summary }}</p>
 
     <Swiper
         v-if="!filter"
         class="my-8 max-w-[360px] sm:max-w-content-sm lg:max-w-content"
         :slides-per-view="slides.slides"
         :space-between="slides.space">
-        <SwiperSlide v-for="category in config.categories" :key="category.name">
+        <SwiperSlide v-for="category in categories" :key="category.name">
             <div class="card image-full h-32 w-40 bg-base-100 shadow-xl lg:h-64 lg:w-80">
                 <figure>
                     <img
@@ -55,12 +55,21 @@
     </ContentList>
 </template>
 <script setup lang="ts">
-    import config from '~/config/.config.json';
     import { EBreakpoints } from '~/utils/breakpoints.enum';
 
+    declare interface ICategory {
+        name: string;
+        description: string;
+        image: string;
+    }
+
+    const appConfig = useAppConfig();
+
     const bgImageStyle = {
-        backgroundImage: `url(/images/${config.bannerImage})`
+        backgroundImage: `url(/images/${appConfig.blog.bannerImage})`
     };
+
+    const categories = appConfig.categories.categories as ICategory[];
 
     const filter = ref('');
     const slides = ref({
@@ -72,7 +81,7 @@
         return {
             path: '/',
             where: [{ category: { $contains: filter.value } }],
-            limit: config.maxArticles,
+            limit: appConfig.blog.maxArticles,
             sort: [{ date: -1 }]
         };
     });
