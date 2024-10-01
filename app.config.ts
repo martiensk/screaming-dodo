@@ -1,8 +1,8 @@
 export default defineAppConfig({
     theme: {
-        colourScheme: 'light',
+        colourScheme: 'luxury',
         homeTemplate: 'default',
-        forceConfig: true
+        forceConfig: false
     },
 
     categories: {
