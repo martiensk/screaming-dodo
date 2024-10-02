@@ -24,7 +24,20 @@
                 name: 'description',
                 content: appConfig.blog.description
             }
+        ],
+        link: [
+            {
+                rel: 'icon',
+                type: 'image/x-icon',
+                href: '/favicon.ico'
+            }
         ]
+    });
+
+    defineOgImageComponent('NuxtSeo', {
+        title: appConfig.blog.name,
+        description: appConfig.blog.description,
+        colorMode: 'dark'
     });
 
     useSeoMeta({
@@ -36,7 +49,7 @@
         ogUrl: runtimeConfig.public.siteUrl,
         twitterTitle: appConfig.blog.name,
         twitterDescription: appConfig.blog.description,
-        // twitterImage: `/${appConfig.seo.logo}`,
+        twitterImage: `/${appConfig.seo.logo}`,
         twitterCard: 'summary'
     });
 

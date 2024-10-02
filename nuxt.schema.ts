@@ -2,29 +2,29 @@ import { field, group } from '@nuxthq/studio/theme';
 
 export default defineNuxtSchema({
     appConfig: {
-        blog: group({
-            title: 'Blog Configuration',
-            description: 'Blog configuration settings',
+        site: group({
+            title: 'Site Configuration',
+            description: 'Site configuration settings',
             icon: 'mdi-palette',
             fields: {
                 name: field({
                     type: 'string',
                     title: 'Name',
-                    description: 'The name of the blog',
+                    description: 'The name of the site',
                     icon: 'mdi-text',
                     default: 'Screaming Dodo'
                 }),
                 description: field({
                     type: 'string',
                     title: 'Description',
-                    description: 'A short description of the blog',
+                    description: 'A short description of the site',
                     icon: 'mdi-text',
                     default: 'A simple and clean theme for Ghost'
                 }),
                 summary: field({
                     type: 'string',
                     title: 'Summary',
-                    description: 'A longer summary of what the blog is about',
+                    description: 'A longer summary of what the site is about',
                     icon: 'mdi-text',
                     default:
                         'A simple and clean theme for Ghost, but not the band. Something else entirely.'
@@ -32,7 +32,7 @@ export default defineNuxtSchema({
                 bannerImage: field({
                     type: 'string',
                     title: 'Banner Image',
-                    description: 'The banner image of the blog',
+                    description: 'The banner image of the site',
                     icon: 'mdi-image',
                     default: 'bannerimage.jpg'
                 }),
@@ -42,18 +42,17 @@ export default defineNuxtSchema({
                     description: 'The maximum number of articles to display',
                     icon: 'mdi-numeric',
                     default: 20
-                })
-            }
-        }),
-        seo: group({
-            title: 'SEO Details',
-            description: 'SEO details',
-            icon: 'mdi-palette',
-            fields: {
-                name: field({
+                }),
+                logo: field({
                     type: 'string',
                     title: 'logo',
                     description: 'Your logo image',
+                    icon: 'mdi-text'
+                }),
+                url: field({
+                    type: 'string',
+                    title: 'URL',
+                    description: 'The URL of the site',
                     icon: 'mdi-text'
                 })
             }

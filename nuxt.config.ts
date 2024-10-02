@@ -1,5 +1,11 @@
 export default defineNuxtConfig({
-    devtools: { enabled: true },
+    devtools: {
+        enabled: true,
+
+        timeline: {
+            enabled: true
+        }
+    },
     css: ['~/assets/main.css'],
 
     postcss: {
@@ -23,7 +29,11 @@ export default defineNuxtConfig({
         'nuxt-delay-hydration',
         '@nuxt/image',
         '@nuxt/content',
-        '@nuxtjs/sitemap'
+        '@nuxtjs/sitemap',
+        '@nuxtjs/robots',
+        'nuxt-og-image',
+        'nuxt-schema-org',
+        '@nuxtjs/seo'
     ],
     studio: {
         enabled: true
