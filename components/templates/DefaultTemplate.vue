@@ -52,7 +52,10 @@
 
     <ContentList :query>
         <template #default="{ list }">
-            <SummaryDefault v-for="article in list" :key="article.title" :article="article" />
+            <SummaryDefaultSummary
+                v-for="article in list"
+                :key="article.title"
+                :article="article" />
         </template>
         <template #not-found>
             <p>No articles found.</p>

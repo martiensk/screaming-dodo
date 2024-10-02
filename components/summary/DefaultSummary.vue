@@ -3,14 +3,14 @@
         class="card mx-auto my-10 w-10/12 max-w-content-sm cursor-pointer rounded-none bg-base-100 shadow-none lg:max-w-content"
         @click="navigateTo(article._path)">
         <figure v-if="article.image">
-            <img :src="`/images/${article.image}`" :alt="article.title" />
+            <NuxtImg :src="`/images/${article.image}`" :alt="article.title" />
         </figure>
         <div class="card-body">
             <div class="mb-4 flex">
                 <div v-if="article.author.avatar" class="avatar">
                     <div
                         class="mr-4 w-12 rounded-full ring ring-primary ring-offset-2 ring-offset-base-100">
-                        <img :src="`/images/authors/${article.author.avatar}`" />
+                        <NuxtImg :src="`/images/authors/${article.author.avatar}`" />
                     </div>
                 </div>
                 <div v-if="article.author.name || article.published">

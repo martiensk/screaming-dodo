@@ -20,7 +20,7 @@
         switch (template) {
             default:
                 dynamicComponent.value = defineAsyncComponent(
-                    () => import('~/components/templates/Default.vue')
+                    () => import('~/components/templates/DefaultTemplate.vue')
                 );
         }
     });
