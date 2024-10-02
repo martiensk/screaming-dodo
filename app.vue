@@ -8,13 +8,36 @@
     import { themeChange } from 'theme-change';
 
     const appConfig = useAppConfig();
+    const runtimeConfig = useRuntimeConfig();
 
     const route = useRoute();
 
     useHead({
         htmlAttrs: {
+            lang: 'en',
             'data-theme': appConfig.theme.colourScheme as string
-        }
+        },
+        title: appConfig.blog.name,
+        meta: [
+            {
+                hid: 'description',
+                name: 'description',
+                content: appConfig.blog.description
+            }
+        ]
+    });
+
+    useSeoMeta({
+        title: appConfig.blog.name,
+        description: appConfig.blog.description,
+        ogTitle: appConfig.blog.name,
+        ogDescription: appConfig.blog.description,
+        // ogImage: `/${appConfig.seo.logo}`,
+        ogUrl: runtimeConfig.public.siteUrl,
+        twitterTitle: appConfig.blog.name,
+        twitterDescription: appConfig.blog.description,
+        // twitterImage: `/${appConfig.seo.logo}`,
+        twitterCard: 'summary'
     });
 
     const key = computed(() => route.fullPath);

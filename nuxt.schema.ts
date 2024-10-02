@@ -45,6 +45,19 @@ export default defineNuxtSchema({
                 })
             }
         }),
+        seo: group({
+            title: 'SEO Details',
+            description: 'SEO details',
+            icon: 'mdi-palette',
+            fields: {
+                name: field({
+                    type: 'string',
+                    title: 'logo',
+                    description: 'Your logo image',
+                    icon: 'mdi-text'
+                })
+            }
+        }),
         theme: group({
             title: 'Theme Configuration',
             description: 'Theme configuration settings',
