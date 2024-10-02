@@ -45,5 +45,9 @@ export default defineNuxtConfig({
 
     site: {
         defaultLocale: 'en'
+    },
+
+    content: {
+        documentDriven: true
     }
 });
