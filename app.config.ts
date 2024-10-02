@@ -1,6 +1,6 @@
 export default defineAppConfig({
     theme: {
-        colourScheme: 'light',
+        colourScheme: 'retro',
         homeTemplate: 'default',
         forceConfig: true
     },
