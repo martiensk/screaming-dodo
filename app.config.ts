@@ -33,7 +33,7 @@ export default defineAppConfig({
     site: {
         logo: 'logo.png',
         url: 'https://mk-blog-ten.vercel.app',
-        name: 'Screaming Dodo',
+        name: 'Prototypical Dodo',
         description: 'A simple and clean theme for Ghost',
         summary: 'A simple and clean theme for Ghost, but not the band. Something else entirely.',
         bannerImage: 'bannerimage.jpg',
