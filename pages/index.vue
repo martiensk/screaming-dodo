@@ -2,9 +2,6 @@
     <NuxtLayout>
         <component :is="dynamicComponent"></component>
     </NuxtLayout>
-    <footer class="navbar justify-center bg-base-200">
-        &copy; {{ appConfig.blog.name }} {{ new Date().getFullYear() }}
-    </footer>
 </template>
 
 <script setup lang="ts">

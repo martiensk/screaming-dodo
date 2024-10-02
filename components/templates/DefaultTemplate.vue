@@ -3,15 +3,15 @@
         <div class="hero-overlay bg-opacity-60"></div>
         <div class="hero-content text-center text-neutral-content">
             <div class="max-w-md">
-                <h1 class="mb-5 text-5xl font-bold">{{ appConfig.blog.name }}</h1>
+                <h1 class="mb-5 text-5xl font-bold">{{ appConfig.site.name }}</h1>
                 <p class="mb-5">
-                    {{ appConfig.blog.description }}
+                    {{ appConfig.site.description }}
                 </p>
             </div>
         </div>
     </div>
 
-    <p v-if="appConfig.blog.summary" class="my-8 px-8 text-center">{{ appConfig.blog.summary }}</p>
+    <p v-if="appConfig.site.summary" class="my-8 px-8 text-center">{{ appConfig.site.summary }}</p>
 
     <Transition @enter="enter" @leave="leave">
         <Swiper
@@ -83,7 +83,7 @@
 
     //#region Refs
     const bgImageStyle = {
-        backgroundImage: `url(/images/${appConfig.blog.bannerImage})`
+        backgroundImage: `url(/images/${appConfig.site.bannerImage})`
     };
 
     const categories = appConfig.categories.categories as ICategory[];
@@ -100,7 +100,7 @@
         return {
             path: '/',
             where: [{ category: { $contains: filter.value } }],
-            limit: appConfig.blog.maxArticles,
+            limit: appConfig.site.maxArticles,
             sort: [{ date: -1 }]
         };
     });

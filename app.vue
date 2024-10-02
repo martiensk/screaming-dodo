@@ -17,12 +17,12 @@
             lang: 'en',
             'data-theme': appConfig.theme.colourScheme as string
         },
-        title: appConfig.blog.name,
+        title: appConfig.site.name,
         meta: [
             {
                 hid: 'description',
                 name: 'description',
-                content: appConfig.blog.description
+                content: appConfig.site.description
             }
         ],
         link: [
@@ -35,21 +35,21 @@
     });
 
     defineOgImageComponent('NuxtSeo', {
-        title: appConfig.blog.name,
-        description: appConfig.blog.description,
+        title: appConfig.site.name,
+        description: appConfig.site.description,
         colorMode: 'dark'
     });
 
     useSeoMeta({
-        title: appConfig.blog.name,
-        description: appConfig.blog.description,
-        ogTitle: appConfig.blog.name,
-        ogDescription: appConfig.blog.description,
-        // ogImage: `/${appConfig.seo.logo}`,
+        title: appConfig.site.name,
+        description: appConfig.site.description,
+        ogTitle: appConfig.site.name,
+        ogDescription: appConfig.site.description,
+        ogImage: `/${appConfig.site.logo}`,
         ogUrl: runtimeConfig.public.siteUrl,
-        twitterTitle: appConfig.blog.name,
-        twitterDescription: appConfig.blog.description,
-        twitterImage: `/${appConfig.seo.logo}`,
+        twitterTitle: appConfig.site.name,
+        twitterDescription: appConfig.site.description,
+        twitterImage: `/${appConfig.site.logo}`,
         twitterCard: 'summary'
     });
 
