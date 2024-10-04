@@ -1,0 +1,71 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "eslint": "eslint **/*.{ts,vue} --fix --max-warnings=0",
+    "prettier": "prettier **/*.{ts,vue} --write --ignore-unknown",
+    "type-check": "vue-tsc --noEmit --resolveJsonModule --skipLibCheck",
+    "lint": "npm run eslint && npm run prettier && npm run type-check",
+    "lint-staged": "lint-staged",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,vue}": [
+      "npm run eslint",
+      "npm run prettier"
+    ]
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^1.5.1",
+    "@nuxt/image": "^1.0.0-rc.3",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/typography": "^0.5.13",
+    "@types/eslint": "^9.6.1",
+    "@typescript-eslint/eslint-plugin": "^8.5.0",
+    "@typescript-eslint/parser": "^8.5.0",
+    "@vue/eslint-config-typescript": "^13.0.0",
+    "autoprefixer": "^10.4.19",
+    "daisyui": "^4.12.10",
+    "eslint": "^8.57.0",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-jsdoc": "^50.2.3",
+    "eslint-plugin-promise": "^7.1.0",
+    "eslint-plugin-regexp": "^2.6.0",
+    "eslint-plugin-vue": "^9.28.0",
+    "gsap": "^3.12.5",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "nuxt-delay-hydration": "^1.3.8",
+    "nuxt-swiper": "^1.2.2",
+    "openai": "^4.47.2",
+    "postcss": "^8.4.38",
+    "postcss-import": "^16.1.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "tailwindcss": "^3.4.3",
+    "theme-change": "^2.5.0",
+    "vue-tsc": "^2.1.6"
+  },
+  "dependencies": {
+    "@nuxt/content": "^2.13.2",
+    "@nuxthq/studio": "^2.1.1",
+    "@nuxtjs/robots": "^4.1.7",
+    "@nuxtjs/seo": "^2.0.0-rc.23",
+    "@nuxtjs/sitemap": "^6.1.0",
+    "@stefanobartoletti/nuxt-social-share": "^1.0.1",
+    "nuxt": "^3.11.2",
+    "nuxt-og-image": "^3.0.4",
+    "nuxt-schema-org": "^3.4.0",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2"
+  }
+}
