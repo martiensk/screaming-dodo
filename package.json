@@ -15,7 +15,7 @@
     "lint": "npm run eslint && npm run prettier && npm run type-check",
     "lint-staged": "lint-staged",
     "prepare": "husky",
-    "update": "git remote get-url template > /dev/null 2>&1 || git remote add template https://github.com/martiensk/mk-blog && git fetch template && git merge -X theirs template/main --allow-unrelated-histories"
+    "update": "git remote get-url template > /dev/null 2>&1 || git remote add template https://github.com/martiensk/mk-blog && git fetch template && git merge -X theirs template/main --allow-unrelated-histories && git push"
   },
   "lint-staged": {
     "*.{ts,vue}": [
