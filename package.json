@@ -1,5 +1,6 @@
 {
-  "name": "nuxt-app",
+  "name": "mkblog",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -13,7 +14,8 @@
     "type-check": "vue-tsc --noEmit --resolveJsonModule --skipLibCheck",
     "lint": "npm run eslint && npm run prettier && npm run type-check",
     "lint-staged": "lint-staged",
-    "prepare": "husky"
+    "prepare": "husky",
+    "update": "git remote get-url template > /dev/null 2>&1 || git remote add template https://github.com/martiensk/mk-blog && git fetch template && git merge template/main --allow-unrelated-histories"
   },
   "lint-staged": {
     "*.{ts,vue}": [
@@ -67,5 +69,6 @@
     "nuxt-schema-org": "^3.4.0",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
-  }
+  },
+  "license": "MIT"
 }
