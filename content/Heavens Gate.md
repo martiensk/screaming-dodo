@@ -1,6 +1,6 @@
 ---
 title: Heavens Fate
-description: Examine the rapid advancements in renewable energy technologies and their role in combating climate change. This article highlights recent innovations and the global shift towards sustainable power sources.
+description: Explore the controversial Heaven's Gate cult - its origins, beliefs, and tragic mass suicide. Understand the impact and legacy of this infamous UFO religion.
 image: applewhite.webp
 author:
   name: Emily Pasek
