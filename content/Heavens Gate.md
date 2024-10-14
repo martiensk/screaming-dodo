@@ -2,6 +2,9 @@
 title: Heavens Fate
 description: Examine the rapid advancements in renewable energy technologies and their role in combating climate change. This article highlights recent innovations and the global shift towards sustainable power sources.
 image: applewhite.webp
+author:
+  name: Emily Pasek
+  avatar: emilypasek.jpeg
 date: 2024-10-14T00:00:00.000Z
 category: Cults
 ---
@@ -58,7 +61,7 @@ Over time, Heaven's Gate captured the interest of the media, although not always
 
 ### Precipitating Events Leading to the Tragedy
 
-Leading up to 1997, several key events acted as catalysts for the tragic end of Heaven's Gate. The aging of the founders, especially the death of Bonnie Nettles in 1985, was a significant turning point. Her death forced Applewhite to re-evaluate their teachings, leading to a more pronounced focus on the urgency of their mission.
+Leading up to 1997, several key events acted as catalysts for the tragic end of Heaven's Gate. The ageing of the founders, especially the death of Bonnie Nettles in 1985, was a significant turning point. Her death forced Applewhite to re-evaluate their teachings, leading to a more pronounced focus on the urgency of their mission.
 
 - **Comet Hale-Bopp**: The discovery of the Hale-Bopp comet became a pivotal sign for the group. Applewhite claimed a spacecraft was trailing the comet, and this was their signal for departure to the Next Level.
 - **Culmination of Beliefs**: The group's intense preparation for their "exit" was a reflection of the culmination of years of indoctrination and belief restructuring.
