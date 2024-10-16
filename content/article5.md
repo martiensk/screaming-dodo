@@ -1,12 +1,12 @@
 ---
-title: 'The Art of Mindfulness Meditation'
+title: The Art of Mindfulness Meditation
 description: |
-    Learn about the transformative power of mindfulness meditation in reducing stress and improving overall well-being. This article provides practical tips for incorporating mindfulness into your daily routine.
+  Learn about the transformative power of mindfulness meditation in reducing stress and improving overall well-being. This article provides practical tips for incorporating mindfulness into your daily routine.
 image: health.jpg
 author:
-    name: John Carpenter
-    avatar: johncarpenter.png
-date: 2021-09-15
+  name: John Carpenter
+  avatar: johncarpenter.png
+date: 2021-09-15T00:00:00.000Z
 category: Health
 ---
 

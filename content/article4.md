@@ -1,12 +1,12 @@
 ---
 title: 'Sustainable Fashion: A New Era'
 description: |
-    Discover the growing trend of sustainable fashion and its importance in reducing environmental impact. This article highlights innovative eco-friendly materials and practices reshaping the fashion industry.
+  Discover the growing trend of sustainable fashion and its importance in reducing environmental impact. This article highlights innovative eco-friendly materials and practices reshaping the fashion industry.
 image: health.jpg
 author:
-    name: John Carpenter
-    avatar: johncarpenter.png
-date: 2021-09-15
+  name: John Carpenter
+  avatar: johncarpenter.png
+date: 2021-09-15T00:00:00.000Z
 category: Fashion
 ---
 

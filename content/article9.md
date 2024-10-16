@@ -1,12 +1,12 @@
 ---
-title: 'The Psychology of Happiness'
+title: The Psychology of Happiness
 description: |
-    Dive into the science behind happiness and discover evidence-based strategies for increasing life satisfaction. This article explores psychological theories and practical techniques for cultivating lasting happiness.
+  Dive into the science behind happiness and discover evidence-based strategies for increasing life satisfaction. This article explores psychological theories and practical techniques for cultivating lasting happiness.
 image: health.jpg
 author:
-    name: John Carpenter
-    avatar: johncarpenter.png
-date: 2021-09-15
+  name: John Carpenter
+  avatar: johncarpenter.png
+date: 2021-09-15T00:00:00.000Z
 category: Health
 ---
 
