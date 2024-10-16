@@ -11,8 +11,6 @@ category: Conspiracies
 
 # Birds Aren't Real
 
-Birds Aren't Real
-
 ## Introduction to the Birds Aren't Real Movement
 
 Ladies and gentlemen, and all folks pondering the curious side of life, welcome to the wonderful world of the Birds Aren't Real movement! No, this isn't a new trending Netflix show. It's a satirical journey into the boundless imagination of conspiracy theories. Think of it as Bigfoot meets the Roomba—a mix of the fantastical and the technological. At its heart, this movement pokes fun at the idea that our feathery friends are no longer our everyday, chirpy comrades. Instead, they're mechanical spies on a top-secret government mission.
