@@ -5,7 +5,7 @@ image: chicken-reading-a-book.jpg
 author:
   name: Emily Pasek
   avatar: emilypasek.jpeg
-date: 2024-10-14T00:00:00.000Z
+date: 2024-10-16T00:00:00.000Z
 category: Conspiracies
 ---
 
