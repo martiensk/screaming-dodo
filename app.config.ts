@@ -2,41 +2,21 @@ export default defineAppConfig({
     theme: {
         colourScheme: 'retro',
         homeTemplate: 'default',
-        forceConfig: true
+        forceConfig: false
     },
 
     categories: {
-        categories: [
-            {
-                name: 'Health',
-                description: 'Health related articles',
-                image: 'health.webp'
-            },
-            {
-                name: 'Technology',
-                description: 'Technology related articles',
-                image: 'tech.webp'
-            },
-            {
-                name: 'Fashion',
-                description: 'Fashion related articles',
-                image: 'fashion.png'
-            },
-            {
-                name: 'Science',
-                description: 'Science related articles',
-                image: 'science.png'
-            }
-        ]
+        categories: [null]
     },
 
     site: {
         logo: 'logo.png',
-        url: 'https://mk-blog-ten.vercel.app',
-        name: 'Prototypical Dodo',
-        description: 'A simple and clean theme for Ghost',
-        summary: 'A simple and clean theme for Ghost, but not the band. Something else entirely.',
-        bannerImage: 'bannerimage.jpg',
+        url: 'https://www.screamingdodo.com',
+        name: 'The Screaming Dodo',
+        description: 'Where the grave meets the grin',
+        summary:
+            'Step into the shadowy world of the Screaming Dodo,  where the macabre dances with mirth and the eerie mingles with the entertaining. Our blog is a unique sanctuary for those who find fascination in the darker corners of existence but prefer their doom and gloom served with a side of levity.',
+        bannerImage: 'banner.jpeg',
         maxArticles: 20
     }
 });
