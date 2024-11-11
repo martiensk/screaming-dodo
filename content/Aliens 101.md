@@ -33,7 +33,7 @@ It led to a spiritual awakening where he famously declared himself as "the Son o
 
 ## The Core Concepts of Icke's Alien Conspiracy
 
-![Image courtesy: Unsplash](https://unsplash.com/photos/woman-in-black-long-sleeve-shirt-hugging-white-and-black-siberian-husky-F_-Yrr_WzBY)
+![Alien Husky](https://nrtmedia.s3.amazonaws.com/DdMrHa61ea8eb-9698-4661731317856_231322.png?AWSAccessKeyId=AKIAU3POYAUZTITBZV7Y\&Signature=4FasjhBajswMEuYIT69iaYxmYaY%3D\&Expires=1731339456)
 
 Having transformed his life like a Marvel superhero who stumbles upon their powers, Icke developed a series of detailed theories that, at the very least, make any science fiction novel look like a mundane grocery list. Let’s unravel these ideas, which are woven more intricately than your grandma’s best sweater.
 
@@ -65,7 +65,7 @@ To conclude, David Icke's theories challenge us to look beyond the surface, albe
 
 ## The Impact of Icke's Theories on Conspiracy Culture
 
-![Image courtesy: Unsplash](https://unsplash.com/photos/yellow-and-white-10-card-g8QRHgDtZ6E)
+![Image courtesy: Unsplash](https://nrtmedia.s3.amazonaws.com/gOABh7b94c69d-44be-40d1731317856_2530034.png?AWSAccessKeyId=AKIAU3POYAUZTITBZV7Y\&Signature=efVq1aJxE43O9RPb4HBhNdLLci0%3D\&Expires=1731339456)
 
 David Icke's tales of alien overlords and shape-shifting reptiles make most science fiction plots look as believable as a weather forecast. His theories have become a staple Thanksgiving topic for conspiracy aficionados. So, what's the impact of these audaciously entertaining ideas on our conspiracy culture?
 
