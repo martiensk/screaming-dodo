@@ -1,12 +1,12 @@
 ---
 title: 'Space Exploration: The Next Frontier'
 description: |
-    Delve into the exciting world of space exploration and the latest developments in interplanetary travel. This article examines current missions, future plans, and the potential for human colonization of other planets.
+  Delve into the exciting world of space exploration and the latest developments in interplanetary travel. This article examines current missions, future plans, and the potential for human colonization of other planets.
 image: health.jpg
 author:
-    name: John Carpenter
-    avatar: johncarpenter.png
-date: 2021-09-15
+  name: John Carpenter
+  avatar: johncarpenter.png
+date: 2021-09-15T00:00:00.000Z
 category: Science
 ---
 

@@ -1,11 +1,11 @@
 ---
-title: 'The Future of Artificial Intelligence'
-description: 'Explore the rapidly evolving landscape of artificial intelligence and its potential impact on society. This article discusses the integration of AI in various sectors and the ethical considerations surrounding its development.'
+title: The Future of Artificial Intelligence
+description: Explore the rapidly evolving landscape of artificial intelligence and its potential impact on society. This article discusses the integration of AI in various sectors and the ethical considerations surrounding its development.
 image: health.jpg
 author:
-    name: Emily Pasek
-    avatar: johncarpenter.png
-date: 2024-02-01
+  name: Emily Pasek
+  avatar: johncarpenter.png
+date: 2024-02-01T00:00:00.000Z
 category: Technology
 ---
 

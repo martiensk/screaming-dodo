@@ -1,12 +1,12 @@
 ---
-title: 'The Rise of Plant-Based Diets'
+title: The Rise of Plant-Based Diets
 description: |
-    Explore the growing popularity of plant-based diets and their impact on personal health and the environment. This article discusses the nutritional aspects and provides tips for transitioning to a plant-based lifestyle.
+  Explore the growing popularity of plant-based diets and their impact on personal health and the environment. This article discusses the nutritional aspects and provides tips for transitioning to a plant-based lifestyle.
 image: health.jpg
 author:
-    name: John Carpenter
-    avatar: johncarpenter.png
-date: 2021-09-15
+  name: John Carpenter
+  avatar: johncarpenter.png
+date: 2021-09-15T00:00:00.000Z
 category: Health
 ---
 

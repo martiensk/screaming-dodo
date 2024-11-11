@@ -1,12 +1,12 @@
 ---
-title: 'Cybersecurity in the Digital Age'
+title: Cybersecurity in the Digital Age
 description: |
-    Understand the critical importance of cybersecurity in our increasingly connected world. This article covers common threats, best practices for protection, and emerging trends in digital security.
+  Understand the critical importance of cybersecurity in our increasingly connected world. This article covers common threats, best practices for protection, and emerging trends in digital security.
 image: health.jpg
 author:
-    name: John Carpenter
-    avatar: johncarpenter.png
-date: 2021-09-15
+  name: John Carpenter
+  avatar: johncarpenter.png
+date: 2021-09-15T00:00:00.000Z
 category: Technology
 ---
 
